@@ -1942,20 +1942,7 @@ plt.figure()
 wordcloud.to_file('cuebcloud.png')
 ```
 
-    c:\program files\python36\lib\site-packages\ipykernel_launcher.py:5: DeprecationWarning:
-    
-    `imread` is deprecated!
-    `imread` is deprecated in SciPy 1.0.0, and will be removed in 1.2.0.
-    Use ``imageio.imread`` instead.
-    
-    
-
-
-
-
     <wordcloud.wordcloud.WordCloud at 0x191ff56e8d0>
-
-
 
 
 ![png](output_142_2.png)
@@ -1970,7 +1957,7 @@ wordcloud.to_file('cuebcloud.png')
 # 数据地图
 df = pd.read_csv('chinacitypop.csv', encoding='utf8')
 df.head()
-plotly.tools.set_credentials_file(username='pangdahai', api_key='pRTwN9QWFpLVXozBvNXJ')
+plotly.tools.set_credentials_file(username='xxxxxxx', api_key='xxxxxxxxxx')
 df['text'] = df['name'] + '<bf>Population' + (df['pop']).astype(str) + 'ten thousand'
 limits = [(0, 2), (3, 10), (11, 100), (101, 200), (201, 350)]
 colors = ['rgb(0, 116, 217)', 'rgb(255, 65, 54)', 'rgb(133, 20, 75)', 'rgb(255, 133, 27)', 'lightgrey']
@@ -1987,15 +1974,8 @@ fig = dict(data=cities, layout=layout)
 py.iplot(fig, filename='d3-bubble-map-chn-populations')
 ```
 
-    High five! You successfully sent some data to your account on plotly. View your plot in your browser at https://plot.ly/~pangdahai/0 or inside your plot.ly account where it is named 'd3-bubble-map-chn-populations'
-    
-
-
-
 
 <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pangdahai/0.embed" height="525px" width="100%"></iframe>
-
-
 
 
 ```python
@@ -2003,12 +1983,6 @@ py.iplot(fig, filename='d3-bubble-map-chn-populations')
 with sns.axes_style('dark'):
     sns.jointplot(salary['salary'], salary['begin_salary'], kind='hex')
 ```
-
-    c:\program files\python36\lib\site-packages\matplotlib\axes\_axes.py:6462: UserWarning:
-    
-    The 'normed' kwarg is deprecated, and has been replaced by the 'density' kwarg.
-    
-    
 
 
 ![png](output_144_1.png)
